@@ -53,6 +53,7 @@ const SQUChatbot = () => {
       return;
     }
 
+    // Add user message
     const newUserMessage = {
       id: Date.now(),
       text: inputText,
@@ -62,10 +63,14 @@ const SQUChatbot = () => {
 
     setMessages(prevMessages => [...prevMessages, newUserMessage]);
     const userInput = inputText;
-    setInputText('');
-    setIsTyping(true);
+    setInputText(''); // Clear input
+    setIsTyping(true); // Show typing animation
 
     try {
+      // Simulate a delay for the typing animation
+      await new Promise(resolve => setTimeout(resolve, 1000)); // 1 second delay
+      
+      // Get response from backend
       const botResponse = await getBotResponse(userInput);
       
       const botMessage = {
@@ -78,6 +83,7 @@ const SQUChatbot = () => {
       setMessages(prevMessages => [...prevMessages, botMessage]);
     } catch (error) {
       console.error('Error:', error);
+      // Add error message to chat
       const errorMessage = {
         id: Date.now() + 1,
         text: "Sorry, I'm having trouble responding right now. Please try again later.",
@@ -86,7 +92,7 @@ const SQUChatbot = () => {
       };
       setMessages(prevMessages => [...prevMessages, errorMessage]);
     } finally {
-      setIsTyping(false);
+      setIsTyping(false); // Hide typing animation
     }
   };
 
@@ -149,10 +155,12 @@ const SQUChatbot = () => {
               SQU
             </div>
             <div className="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm border border-yellow-200">
-              <div className="flex gap-2">
-                <span className="w-2 h-2 bg-yellow-500 rounded-full animate-bounce opacity-60"></span>
-                <span className="w-2 h-2 bg-yellow-500 rounded-full animate-bounce [animation-delay:0.2s] opacity-60"></span>
-                <span className="w-2 h-2 bg-yellow-500 rounded-full animate-bounce [animation-delay:0.4s] opacity-60"></span>
+              <div className="flex items-center gap-2">
+                <div className="flex gap-1">
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full animate-bounce"></span>
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full animate-bounce [animation-delay:0.2s]"></span>
+                  <span className="w-2 h-2 bg-yellow-500 rounded-full animate-bounce [animation-delay:0.4s]"></span>
+                </div>
               </div>
             </div>
           </div>
