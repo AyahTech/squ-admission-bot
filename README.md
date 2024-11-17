@@ -72,9 +72,9 @@ huggingface-cli login
 python app.py
 
 # API will be available at http://localhost:5000/api/chat
-
-## 📁 Project Structure
 ```
+## 📁 Project Structure
+
 ### 🔑 Environment Setup
 
 #### Prerequisites
