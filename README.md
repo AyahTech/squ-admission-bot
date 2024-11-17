@@ -107,9 +107,5 @@ squ-chatbot/
 - Minimum 16GB RAM recommended
 - PDF documents for knowledge base
 
-## 👤 Contact
-
-Ayah Al-Shanfari - [@AyahTech](https://github.com/AyahTech)
-
 ---
-<p align="center">Made with ❤️ for Sultan Qaboos University</p> 
+<p align="center">Made with ❤️🇴🇲 for Sultan Qaboos University</p> 
