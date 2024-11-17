@@ -48,7 +48,7 @@ npm install
 npm start
 
 # Application will run on http://localhost:3000
-
+```
 ### 🛠️ Backend Setup
 ```bash
 # Install required Python packages
@@ -74,7 +74,7 @@ python app.py
 # API will be available at http://localhost:5000/api/chat
 
 ## 📁 Project Structure
-
+```
 ### 🔑 Environment Setup
 
 #### Prerequisites
@@ -98,7 +98,7 @@ squ-chatbot/
 │   └── logo.png                # SQU logo asset
 ├── package.json                # Project dependencies
 └── README.md                   # Project documentation         
-
+```
 ## ⚡ Requirements
 
 - Node.js 14+
